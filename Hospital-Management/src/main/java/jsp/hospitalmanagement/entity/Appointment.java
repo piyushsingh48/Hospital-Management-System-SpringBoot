@@ -8,8 +8,7 @@ import jakarta.persistence.Enumerated;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter
-@Setter
+
 @Entity
 public class Appointment {
 	@Id
@@ -24,6 +23,46 @@ public class Appointment {
 	@JoinColumn(name="patient_id")
 	private Patient patient;
 	
+	public Integer getAppointmentId() {
+		return appointmentId;
+	}
+
+	public void setAppointmentId(Integer appointmentId) {
+		this.appointmentId = appointmentId;
+	}
+
+	public LocalDateTime getAppointmentDateTime() {
+		return appointmentDateTime;
+	}
+
+	public void setAppointmentDateTime(LocalDateTime appointmentDateTime) {
+		this.appointmentDateTime = appointmentDateTime;
+	}
+
+	public AppointmentStatus getStatus() {
+		return status;
+	}
+
+	public void setStatus(AppointmentStatus status) {
+		this.status = status;
+	}
+
+	public Patient getPatient() {
+		return patient;
+	}
+
+	public void setPatient(Patient patient) {
+		this.patient = patient;
+	}
+
+	public Doctor getDoctor() {
+		return doctor;
+	}
+
+	public void setDoctor(Doctor doctor) {
+		this.doctor = doctor;
+	}
+
 	@ManyToOne
 	@JoinColumn(name = "doctor_id")
 	private Doctor doctor;

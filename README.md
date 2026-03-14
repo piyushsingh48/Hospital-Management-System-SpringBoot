@@ -55,10 +55,6 @@ src/main/resources
 5. Open the browser and access the application at
    http://localhost:8080
 
-## 📸 Screenshots
-
-(Add screenshots of your project here)
-
 ## 👨‍💻 Author
 
 **Piyush Kumar Singh**
